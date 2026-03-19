@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Star, ShoppingCart, Heart } from "lucide-react";
+import { useCartStore } from "@/store/cartStore";
 
 interface ProductCardProps {
   product: {
@@ -17,9 +20,24 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const addItem = useCartStore((state) => state.addItem);
+  const setIsOpen = useCartStore((state) => state.setIsOpen);
+
   const currentPrice = product.discount
     ? product.price - (product.price * product.discount) / 100
     : product.price;
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    addItem({
+      productId: product.id,
+      name: product.name,
+      price: currentPrice,
+      image: product.image,
+      quantity: 1,
+    });
+    setIsOpen(true);
+  };
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-xl">
@@ -95,6 +113,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           {/* Add to Cart Button */}
           <button 
+            onClick={handleAddToCart}
             disabled={product.isOutOfStock}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground transition-all hover:scale-110 hover:bg-primary/90 disabled:opacity-50 disabled:hover:scale-100"
           >

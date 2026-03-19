@@ -3,13 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-import React from "react";
+import NextAuthProvider from "@/providers/NextAuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Premium E-commerce | Antigravity Shop",
-  description: "Modern, Clean, and Professional E-commerce Platform",
+  title: "Antigravity Shop",
+  description: "E-commerce premium desenvolvido por Antigravity.",
 };
 
 export default function RootLayout({
@@ -20,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <NextAuthProvider>
+          <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-primary/30">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </NextAuthProvider>
       </body>
     </html>
   );
