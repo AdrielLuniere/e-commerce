@@ -1,70 +1,78 @@
-# Professional E-commerce Platform
+# Plataforma de E-commerce Profissional
 
-A modern, premium e-commerce platform built with Next.js 14, TypeScript, Prisma, and Tailwind CSS.
+Uma plataforma de e-commerce premium e moderna desenvolvida com Next.js 14, TypeScript, Prisma e Tailwind CSS.
 
-## 🚀 Vision & Features
+## 🚀 Visão & Funcionalidades
 
-This project aims to provide a complete shopping experience with a focus on visual excellence, performance, and advanced functionality.
+Este projeto tem como objetivo fornecer uma experiência de compra completa, com foco em excelência visual, performance e funcionalidades avançadas.
 
-### Core Features
+### Principais Funcionalidades
 
-- **🎨 Visual Identity**: Modern, clean design with a custom color palette and responsive layout.
-- **🛍️ Product Discovery**: Advanced search, filtering (price, brand, category), and smooth animations.
-- **🛒 Shopping Cart**: Persistent cart with real-time updates and coupon support.
-- **💳 Secure Checkout**: Multi-step flow with ViaCEP integration and 3D card visualization.
-- **👤 User Accounts**: Order history, address management, and social login.
-- **📦 Order Tracking**: Real-time tracking timeline with email notifications.
-- **🔧 Admin Dashboard**: Full control over products, orders, customers, and analytics.
-- **🔍 SEO & Performance**: Optimized for Core Web Vitals and Google Search.
+- **🎨 Identidade Visual**: Design moderno e limpo, paleta de cores customizada e layout totalmente responsivo.
+- **🛍️ Descoberta de Produtos**: Pesquisa avançada, filtros (preço, marca, categoria) e animações suaves.
+- **🛒 Carrinho de Compras**: Carrinho persistente com atualizações em tempo real e suporte a cupons de desconto.
+- **💳 Checkout Seguro**: Fluxo multi-etapas com integração ViaCEP e visualizador de cartão 3D ao vivo.
+- **👤 Contas de Usuário**: Painel completo, histórico de pedidos, gerenciamento de endereços e login por e-mail.
+- **📦 Rastreamento de Pedidos**: Timeline de rastreamento com notificações de pedidos.
+- **🔧 Painel Administrativo**: Controle total sobre produtos, clientes, pedidos e relatórios de vendas.
+- **🔍 SEO & Performance**: Otimizado para as métricas do Core Web Vitals e indexação pelo Google.
 
-## 🛠️ Tech Stack
+## 🛠️ Tecnologias Utilizadas
 
-| Layer                | Technology                                        |
-| -------------------- | ------------------------------------------------- |
-| **Frontend**         | Next.js 14 (App Router), TypeScript, Tailwind CSS |
-| **UI Components**    | shadcn/ui, Lucide Icons                           |
-| **State Management** | Zustand                                           |
-| **Backend/API**      | Next.js API Routes                                |
-| **Database**         | PostgreSQL + Prisma ORM                           |
-| **Authentication**   | NextAuth.js                                       |
-| **Payments**         | Stripe / Mercado Pago                             |
-| **Email**            | Resend                                            |
-| **Media Storage**    | Cloudinary                                        |
+| Camada                 | Tecnologia                                        |
+| ---------------------- | ------------------------------------------------- |
+| **Frontend**           | Next.js 14 (App Router), TypeScript, Tailwind CSS |
+| **Componentes UI**     | shadcn/ui, Lucide Icons                           |
+| **Gerenciamento de Estado** | Zustand                                      |
+| **Backend/API**        | Next.js API Routes                                |
+| **Banco de Dados**     | PostgreSQL + Prisma ORM                           |
+| **Autenticação**       | NextAuth.js                                       |
+| **Pagamentos**         | Stripe / Mercado Pago                             |
+| **E-mail**             | Resend                                            |
+| **Armazenamento de Mídia**| Cloudinary                                     |
 
-## 📅 Roadmap (Phases)
+## 📅 Roadmap (Fases de Desenvolvimento)
 
-### Phase 1: Foundation & Project Setup
+### Fase 1: Fundação & Setup do Projeto
 
-- Environment configuration and project initialization.
-- Database schema design and Prisma setup.
+- Configuração do ambiente e inicialização do projeto.
+- Design do banco de dados e configuração do Prisma.
 
-### Phase 2: Design System & Core Layout
+### Fase 2: Design System & Layout Principal
 
-- Custom Tailwind tokens and global styles.
-- Professional Header and Footer components.
+- Tokens customizados do Tailwind e estilos globais.
+- Componentes profissionais de Header e Footer.
 
-### Phase 3: Home Page & Product Discovery
+### Fase 3: Página Inicial (Home) & Descoberta
 
-- Interactive hero banners and featured product grids.
+- Banners dinâmicos e grids rotativos de produtos em destaque.
 
-### Phase 4: Product Listing & Details
+### Fase 4: Listagem & Detalhes de Produtos
 
-- Advanced filtering system and responsive product detail pages.
+- Sistema de filtro avançado e páginas de detalhes super responsivas.
 
-### Phase 5: Transactional Core
+### Fase 5: Integração de Carrinho Efetiva
 
-- Cart logic, Checkout flow, and Payment integrations.
+- Lógica completa e imersiva do Carrinho de Compras integrado ao menu lateral.
 
-### Phase 6: User & Admin Modules
+### Fase 6: Autenticação & Módulo de Usuário
 
-- Dashboard implementation and management tools.
+- Fluxo seguro de log-in, cadastro e criação da área "Minha Conta".
+
+### Fase 7: Checkout & Pagamentos
+
+- Integração total de endereço por CEP, interface de pagamento pix ou crédito via visualização 3D.
+
+### Fase 8 e 9: Rastreamento & Painel Admin
+
+- (Em Progresso) Status visual da entrega e Back-office corporativo.
 
 ---
 
-## 🛠️ How to Run (Coming Soon)
+## 🛠️ Como Executar 
 
-1. Clone the repository.
-2. Install dependencies: `npm install`.
-3. Set up environment variables in `.env`.
-4. Run Prisma migrations: `npx prisma migrate dev`.
-5. Start the development server: `npm run dev`.
+1. Faça o clone do repositório.
+2. Instale as dependências com o comando: `npm install`.
+3. Configure suas variáveis de ambiente copiando o arquivo `.env.example` para `.env`.
+4. Rode as migrations do banco de dados: `npx prisma db push`.
+5. Inicie o servidor em ambiente de desenvolvimento: `npm run dev`.
