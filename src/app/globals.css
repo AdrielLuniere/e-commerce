@@ -74,3 +74,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Final Polish Utilities */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+::-moz-selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}

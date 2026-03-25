@@ -8,8 +8,37 @@ import NextAuthProvider from "@/providers/NextAuthProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Antigravity Shop",
-  description: "E-commerce premium desenvolvido por Antigravity.",
+  title: {
+    template: "%s | Antigravity Shop",
+    default: "Antigravity Shop | E-commerce Premium",
+  },
+  description: "E-commerce premium desenvolvido por Antigravity. Desktops, notebooks, celulares e acessórios com a melhor tecnologia.",
+  keywords: ["e-commerce", "tecnologia", "antigravity", "loja", "compras", "eletrônicos"],
+  authors: [{ name: "Antigravity Team" }],
+  creator: "Antigravity",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://antigravity.shop",
+    title: "Antigravity Shop | E-commerce Premium",
+    description: "E-commerce premium focado na melhor experiência de usuário.",
+    siteName: "Antigravity Shop",
+    images: [
+      {
+        url: "https://antigravity.shop/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Antigravity Shop Banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Antigravity Shop | E-commerce Premium",
+    description: "E-commerce premium focado na melhor experiência de usuário.",
+    images: ["https://antigravity.shop/twitter-image.jpg"],
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
