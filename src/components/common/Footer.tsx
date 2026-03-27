@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t pt-8 md:flex-row">
           <p className="text-center text-xs text-muted-foreground md:text-left">
-            © {currentYear} Antigravity Shop. Todos os direitos reservados.
+            © {currentYear} LUNIERE Shop. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <img src="https://vignette.wikia.nocookie.net/logopedia/images/e/e1/Visa_Logo_2021.svg" alt="Visa" className="h-4 grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100" />
