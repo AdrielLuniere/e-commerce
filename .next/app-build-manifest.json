@@ -11,15 +11,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/carrinho/page": [
+    "/conta/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/carrinho/page.js"
+      "static/chunks/app/conta/layout.js"
     ],
-    "/produtos/page": [
+    "/conta/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/produtos/page.js"
+      "static/chunks/app/conta/page.js"
+    ],
+    "/(auth)/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(auth)/login/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",
